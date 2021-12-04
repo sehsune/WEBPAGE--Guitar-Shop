@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root {
+    --bg-color: black;
+    --main-color: orange;
+    --border: 0.1rem solid rgba(2555, 255, 255, .2);
+}
+
+html {
+    font-size: 15px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-color);
+}
+
+section {
+    padding: 2rem 2rem;
+}
+
+.btn {
+    border: 1px solid var(--main-color);
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem 3rem;
+    margin: 2rem 3rem;
+}
+
+.btn:hover {
+    color: var(--main-color);
+}
+
+.header {
+    background: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: .5rem 1.5rem;
+}
+
+.logo img {
+    display: block;
+    height: 4rem;
+}
+
+.header .navbar a {
+    color: white;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div {
+    color: white;
+    font-size: 1.7rem;
+    margin: 0 1rem;
+}
+
+.header .icons div:hover {
+    color: var(--main-color);
+}
+
+#menu-btn {
+    display: none;
+}
+
+.header .search-form {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: white;
+    align-items: center;
+    width: 40rem;
+    height: 3rem;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active {
+    transform: scaleY(1);
+}
+
+
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.4rem;
+    text-transform: none;
+    padding: 1rem;
+}
+
+.header .search-form label {
+    cursor: pointer;
+    font-size: 1.3rem;
+    margin: 0 1.4rem;
+}
+
+.header .search-form label:hover {
+    color: var(--main-color);
+}
+
+.shop-container .content img {
+    height: 20px;
+}
+
+.header .shop-contanier {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 12rem;
+    /* height: 35rem; */
+    background-color: white;
+    padding: 0 1.0rem;
+
+}
+
+.header .shop-contanier.active {
+    right: 0%;
+}
+
+.header .shop-contanier .shop-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 1.0rem;
+}
+
+.header .shop-contanier .shop-item img {
+    width: 40%;
+    height: 40%;
+}
+
+.header .shop-contanier .shop-item .fa-times {
+    position: absolute;
+    left: 80%;
+    cursor: pointer;
+    font-size: 1.2rem;
+
+}
+
+.header .shop-contanier .shop-item .fa-times:hover {
+    color: var(--main-color);
+}
+
+.header .shop-contanier .shop-item h1 {
+    font-size: 1.5rem;
+    margin: .5rem 0;
+}
+
+.header .shop-contanier .shop-item .content {
+    padding-left: 1.5rem;
+}
+
+.buy-btn {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: .7rem;
+    padding: 1rem 0.5rem;
+    font-size: 1.2rem;
+    border: 2px solid black;
+    text-align: center;
+
+}
+
+.buy-btn:hover {
+    letter-spacing: .2rem;
+    color: var(--main-color);
+}
+
+
+
+
+/* HOME */
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    background-image: url(./images/home.jpg);
+    background-size: cover;
+    background-position: left;
+    align-items: center;
+    padding: 2rem 4rem;
+}
+
+.home .content {
+    max-width: 35rem;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 10%;
+}
+
+.home .content h1 {
+    max-width: 25rem;
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.home .content p {
+    max-width: 25rem;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    line-height: 2rem;
+}
+
+/* section .about */
+
+.h1-about {
+    width: 100%;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.h1-about span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+
+.about .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about .row .content {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 30rem;
+    padding: 2rem 1rem;
+}
+
+.about .row .image {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 30rem;
+}
+
+.about .row .image img {
+    width: 100%;
+}
+
+.about .row .content h1 {
+    font-size: 2.3rem;
+    color: white;
+    padding: 1rem;
+    padding: 1rem 2rem;
+
+}
+
+.about .row .content p {
+    font-size: 1.2rem;
+    color: white;
+    line-height: 2.0rem;
+    padding: 3rem 2rem;
+    margin-bottom: 1rem;
+}
+
+/* PRODUCTS */
+
+
+.products .h1-products {
+    width: 100%;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.products .h1-products span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.products .box-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 1rem auto;
+    padding: 2rem 2rem;
+}
+
+.products .box-container .box {
+    text-align: center;
+    border: var(--border);
+    flex-basis: 30rem;
+    height: 34rem;
+    margin: 1rem 1rem;
+    padding: 2rem 1rem;
+    flex-shrink: 1;
+    flex-grow: 1;
+
+}
+
+.products .box-container .box .icons a {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 1rem;
+    color: white;
+    border: var(--border);
+    margin: .3rem;
+}
+
+.products .box-container .box .icons a:hover {
+    background-color: var(--main-color);
+    color: red;
+}
+
+.products .box-container .box .image {
+    height: 17rem;
+    width: 13rem;
+    margin: 1rem auto;
+    padding: 2rem 1rem;
+}
+
+.products .box-container .box .image img {
+    height: 100%;
+    width: 100%;
+}
+
+.products .box-container .box .content {
+    color: white;
+    font-size: 1rem;
+}
+
+.products .box-container .box .content h2 {
+    color: white;
+    padding: 0.7rem;
+}
+
+.products .box-container .box .content .stars {
+    color: var(--main-color);
+    padding: 0.7rem;
+}
+
+
+.products .box-container .box .content .price {
+    color: white;
+    padding: 0.7rem;
+    font-size: 1rem;
+}
+
+
+/* REVIEW*/
+
+.review .h1-review {
+    width: 100%;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.review .h1-review span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.review .box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+
+.review .box-container .box {
+    text-align: center;
+    border: var(--border);
+    height: 30rem;
+    flex-basis: 30rem;
+    margin: 1rem 1rem;
+    padding: 2rem 2rem;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.review .box-container .box p {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    line-height: 1.5;
+    padding: 1rem 1rem;
+}
+
+.review .box-container .box .user {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    padding: 1rem 1rem;
+}
+
+.review .box-container .box .stars {
+    color: var(--main-color);
+    padding: 1rem;
+}
+
+/* CONTACT */
+
+.contact .h1-contact {
+    width: 100%;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.contact .h1-contact span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* padding: 1rem 1rem; */
+}
+
+.contact .row .map {
+    height: 35rem;
+    flex-basis: 35rem;
+    flex-shrink: 1;
+    flex-grow: 1;
+    object-fit: cover;
+
+}
+
+.contact .row form {
+    background-color: #111;
+    height: 35rem;
+    flex-basis: 35rem;
+    flex-shrink: 1;
+    flex-grow: 1;
+    text-align: center;
+    padding: 2rem 2rem;
+}
+
+.contact .row form .input-box {
+    display: flex;
+    margin: 1.5rem 0;
+    border: var(--border);
+}
+
+.contact .row form .input-box span {
+    color: white;
+    font-size: 2rem;
+    padding: 2rem 2rem;
+
+}
+
+.contact .row form .input-box input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.3rem;
+    text-transform: none;
+}
+
+.contact .row .btn {
+    color: black;
+}
+
+.contact .row .btn:hover {
+    color: var(--main-color);
+    background-color: var(--main-color);
+    color: white;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    background-color: #111;
+}
+
+.footer .share {
+    padding: 1rem;
+}
+
+.footer .share a {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    border: var(--border);
+    color: white;
+    margin: 0.5rem;
+
+}
+
+.footer .share a:hover {
+    color: var(--main-color)
+}
+
+.footer .links {
+    display: flex;
+    justify-content: center;
+}
+
+.footer .links a {
+    color: white;
+    font-size: 1.2rem;
+    border: var(--border);
+    padding: 0.5rem 1rem;
+    margin: 1rem 0.7rem;
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+
+@media (max-width:991px) {
+    html {
+        font-size: 12.5px;
+    }
+
+    .home {
+        background-position: left;
+        text-align: center;
+    }
+}
+
+@media (max-width:768px) {
+
+    html {
+        font-size: 12.5px;
+    }
+
+    #menu-btn {
+        display: inline-block;
+    }
+
+
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+    }
+
+    .header .navbar.active {
+        right: 0%;
+
+    }
+
+    .header .navbar a {
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .header .search-form {
+        width: 90%;
+        right: 5%;
+    }
+
+
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 12.0px;
+    }
+
+    .header .search-form {
+        width: 90%;
+        right: 5%;
+    }
+
+}
